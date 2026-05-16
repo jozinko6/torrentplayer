@@ -1,0 +1,41 @@
+{
+  "name": "torrentstream-desktop",
+  "version": "1.0.0",
+  "description": "TorrentStream Desktop - Stream torrents directly to video player",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . --disable-gpu",
+    "dev": "electron . --dev --disable-gpu",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.torrentstream.desktop",
+    "productName": "TorrentStream",
+    "files": [
+      "main.js",
+      "preload.js",
+      "app.js",
+      "index.html",
+      "style.css",
+      "sw.js",
+      "manifest.json",
+      "package.json"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": null
+    }
+  },
+  "keywords": ["torrent", "stream", "video", "electron"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "electron": "^42.1.0",
+    "webtorrent": "^2.8.5"
+  },
+  "devDependencies": {
+    "electron-builder": "^25.1.8"
+  }
+}
